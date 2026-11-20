@@ -578,3 +578,624 @@ img, svg {
     gap: 8px;
   }
 }
+
+
+/* ==========================================================
+   FASE 2 & 3: TAMBAHAN STYLING DATA, REKOMENDASI & INTERAKTIF
+   ========================================================== */
+
+/* Subpage Hero */
+.hero-subpage {
+  background: linear-gradient(180deg, #ecfdf5 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--border-light);
+  padding: 48px 0 36px;
+}
+
+.hero-subpage .hero-eyebrow {
+  margin-bottom: 12px;
+}
+
+.hero-subpage h1 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+.hero-subpage p.lead {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Grid Metrik Ringkasan */
+.grid-metrik {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.kartu-metrik {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.kartu-metrik::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+}
+
+.kartu-metrik--aksen::before {
+  background: var(--accent);
+}
+
+.kartu-metrik--info::before {
+  background: #3b82f6;
+}
+
+.kartu-metrik--warning::before {
+  background: #ef4444;
+}
+
+.kartu-metrik:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.kartu-metrik .label-metrik {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.kartu-metrik .nilai-metrik {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.kartu-metrik .nilai-metrik span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.kartu-metrik .sub-metrik {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Kotak Highlight & Callout Edukatif */
+.highlight-box {
+  background: #ffffff;
+  border: 1px solid var(--primary-border);
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  margin: 28px 0;
+  box-shadow: var(--shadow-card);
+}
+
+.highlight-box--warning {
+  border-color: #fde68a;
+  border-left-color: var(--accent);
+  background: #fffbeb;
+}
+
+.highlight-box--info {
+  border-color: #bfdbfe;
+  border-left-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.highlight-box h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.highlight-box p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.highlight-box .rumus-box {
+  background: #ffffff;
+  border: 1px dashed var(--border-hover);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-hover);
+  display: inline-block;
+  margin: 10px 0 6px;
+}
+
+/* Grid & Kartu Grafik */
+.grid-grafik {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.grid-grafik--full {
+  grid-template-columns: 1fr;
+}
+
+.kartu-grafik {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.kartu-grafik-header {
+  margin-bottom: 18px;
+}
+
+.kartu-grafik-header h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kartu-grafik-header p {
+  font-size: 13.5px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  flex-grow: 1;
+}
+
+.chart-wrapper--lg {
+  height: 400px;
+}
+
+.penjelas-grafik {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary);
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.penjelas-grafik strong {
+  color: var(--text-main);
+}
+
+/* Tab Filter Navigasi Data */
+.tab-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-group {
+  display: inline-flex;
+  background: var(--bg-subtle);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  gap: 4px;
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--trans-simple);
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.aktif {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Tabel Data Responsif */
+.tabel-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+}
+
+.tabel-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: left;
+}
+
+.tabel-data th {
+  background: #f1f5f9;
+  color: var(--text-main);
+  padding: 12px 16px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.tabel-data td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+
+.tabel-data tr:last-child td {
+  border-bottom: none;
+}
+
+.tabel-data tr:hover td {
+  background: #f8fafc;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge--hijau {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge--kuning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge--merah {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge--biru {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* ==========================================================
+   FASE 3: REKOMENDASI & TOOLS INTERAKTIF
+   ========================================================== */
+
+/* Grid Rekomendasi Aksi */
+.rekomendasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.kartu-rekomendasi {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.kartu-rekomendasi:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.rekomendasi-target {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-hover);
+  background: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.kartu-rekomendasi h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.kartu-rekomendasi .deskripsi-masalah {
+  font-size: 13.5px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  line-height: 1.5;
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+}
+
+.kartu-rekomendasi .langkah-aksi {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.kartu-rekomendasi .langkah-aksi li {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.kartu-rekomendasi .langkah-aksi li::before {
+  content: "✔";
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Interaktif: Kalkulator Regresi Linear */
+.kalkulator-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  margin: 32px 0;
+}
+
+.kalkulator-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.kalkulator-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.kalkulator-form .input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.kalkulator-form input[type="range"] {
+  flex-grow: 1;
+  accent-color: var(--primary);
+  height: 6px;
+}
+
+.kalkulator-form input[type="number"] {
+  width: 72px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.kalkulator-hasil {
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+}
+
+.kalkulator-hasil .judul-hasil {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.kalkulator-hasil .skor-prediksi {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.kalkulator-hasil .kategori-prediksi {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.kalkulator-hasil .pesan-prediksi {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Interaktif: Tantangan 7 Hari */
+.tantangan-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-card);
+  margin-top: 24px;
+}
+
+.progress-bar-container {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-full);
+  height: 10px;
+  overflow: hidden;
+  margin: 16px 0 24px;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.daftar-tantangan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-tantangan {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-subtle);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--trans-simple);
+}
+
+.item-tantangan:hover {
+  background: #ffffff;
+  border-color: var(--border-hover);
+}
+
+.item-tantangan.selesai {
+  background: var(--primary-light);
+  border-color: var(--primary-border);
+}
+
+.item-tantangan input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.item-tantangan-teks {
+  flex-grow: 1;
+}
+
+.item-tantangan-teks strong {
+  display: block;
+  font-size: 14.5px;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.item-tantangan-teks span {
+  font-size: 12.5px;
+  color: var(--text-light);
+}
+
+/* Responsive Overrides untuk Fase 2 & 3 */
+@media (max-width: 900px) {
+  .grid-grafik {
+    grid-template-columns: 1fr;
+  }
+  .kalkulator-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-subpage h1 {
+    font-size: 28px;
+  }
+  .grid-metrik {
+    grid-template-columns: 1fr;
+  }
+  .chart-wrapper {
+    height: 260px;
+  }
+  .chart-wrapper--lg {
+    height: 320px;
+  }
+  .kartu-grafik {
+    padding: 18px 14px;
+  }
+  .kalkulator-card,
+  .tantangan-card {
+    padding: 20px 16px;
+  }
+}
